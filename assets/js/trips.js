@@ -46,7 +46,7 @@ const TRIPS = [
     date: "10 Jul - 15 Jul 2026",
     duration: "6 Days",
     price: "Rp 15.9 Jt",
-    Hokkaido Nature — Sapporo • Otaru • Furano: 15900000,
+    priceValue:15900000,
     badge: "Popular",
     cover: "https://i.pinimg.com/736x/3c/01/06/3c0106a05aabf146b4b1b93760ce11c5.jpg",
     stay: "Hotel 3★ (Tokyo/Osaka)",
