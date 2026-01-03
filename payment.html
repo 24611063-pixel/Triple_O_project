@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pembayaran | Triple O</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 24px;
+    }
+    .card {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #5B7258;
+    }
+    .total {
+      font-size: 18px;
+      margin: 16px 0;
+    }
+    img {
+      max-width: 260px;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="title">Pembayaran Trip</div>
+
+    <p id="packageName"></p>
+    <div class="total" id="totalPayment"></div>
+
+    <!-- GANTI DENGAN QRIS ASLI KAMU -->
+    <img src="img/qr_dana.jpeg" alt="QRIS Triple O">
+
+    <p>Silakan scan QRIS di atas menggunakan m-banking / e-wallet Anda.</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("packageName").innerText =
+      params.get("package") || "";
+
+    document.getElementById("totalPayment").innerText =
+      "Total: Rp " + Number(params.get("total")).toLocaleString("id-ID");
+  </script>
+
+</body>
+</html>
