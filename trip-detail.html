@@ -173,33 +173,65 @@
               <input type="hidden" name="tripId" id="tripId" value="" />
 
               <div class="mb-2">
-                <label class="form-label text-muted small">Name</label>
-                <input name="name" class="form-control rounded-4 py-3" required placeholder="Full name" />
-              </div>
+  <label class="form-label text-muted small">Name</label>
+  <input
+    name="name"
+    class="form-control rounded-4 py-3"
+    required
+    placeholder="Full name"
+    pattern="[A-Za-z\s]+"
+    title="Name hanya boleh berisi huruf"
+    oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')"
+  />
+</div>
 
-              <div class="mb-2">
-                <label class="form-label text-muted small">Email</label>
-                <input name="email" type="email" class="form-control rounded-4 py-3" required placeholder="name@email.com" />
-              </div>
+<div class="mb-2">
+  <label class="form-label text-muted small">Email</label>
+  <input
+    name="email"
+    type="email"
+    class="form-control rounded-4 py-3"
+    required
+    placeholder="name@email.com"
+  />
+</div>
 
-              <div class="mb-2">
-                <label class="form-label text-muted small">Departure Date</label>
-                <input name="date" type="date" class="form-control rounded-4 py-3" required />
-              </div>
+<div class="mb-2">
+  <label class="form-label text-muted small">Departure Date</label>
+  <input
+    name="date"
+    type="date"
+    class="form-control rounded-4 py-3"
+    required
+    min="2026-01-01"
+  />
+</div>
 
-              <div class="mb-2">
-                <label class="form-label text-muted small">Pax</label>
-                <input name="pax" type="number" min="1" value="1" class="form-control rounded-4 py-3" required />
-              </div>
+<div class="mb-2">
+  <label class="form-label text-muted small">Pax</label>
+  <input
+    name="pax"
+    type="number"
+    min="1"
+    value="1"
+    class="form-control rounded-4 py-3"
+    required
+  />
+</div>
 
-              <div class="mb-3">
-                <label class="form-label text-muted small">Tour Guide</label>
-                <select name="guideGender" class="form-select rounded-4 py-3" required>
-                  <option value="" disabled>Select</option>
-                  <option value="Female">Female</option>
-                  <option value="Male">Male</option>
-                </select>
-              </div>
+<div class="mb-3">
+  <label class="form-label text-muted small">Tour Guide</label>
+  <select
+    name="guideGender"
+    class="form-select rounded-4 py-3"
+    required
+  >
+    <option value="" disabled selected>Select</option>
+    <option value="Female">Female</option>
+    <option value="Male">Male</option>
+  </select>
+</div>
+
 
               <button type="submit" class="btn w-100 py-3 fw-bold" style="background: #5b7258; color: #fff; border-radius: 18px">Submit Booking</button>
             </form>
@@ -245,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- SCRIPT BOOKING (FINAL & BERSIH) -->
+<!-- SCRIPT BOOKING  -->
 <script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbwo-xHJvwWgOlYYAyPcXY_W11XbQ07H98gSH2Z2dRtblHa77jQoeaV2QDgR2qoA6NOB/exec";
 const bookingForm = document.getElementById("bookingForm");
