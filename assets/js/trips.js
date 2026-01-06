@@ -10,7 +10,7 @@ const TRIPS = [
     date : "Pilih Tanggal yang Sesuai",
     duration: "8 Days",
     price: "Rp 18.2 Jt",
-    hokkaido: 18200000,
+    priceValue: 18200000,
     badge: "Sakura",
     cover: "https://i.pinimg.com/1200x/e2/c2/b2/e2c2b267677367213e32eba82444679b.jpg",
     stay: "Hotel 3–4★ (Tokyo/Osaka)",
